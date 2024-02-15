@@ -11,6 +11,7 @@ while True:
     imageRGB = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     results = hands.process(imageRGB)
     # checking whether a hand is detected
+    
     if results.multi_hand_landmarks:
         for handLms in results.multi_hand_landmarks: # working with each hand
             for id, lm in enumerate(handLms.landmark):
